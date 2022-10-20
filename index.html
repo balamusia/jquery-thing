@@ -3,6 +3,10 @@
   
   <style>
     
+    img{
+      position: absolute;
+      display:block;
+    }
   
   
   </style>
@@ -10,9 +14,18 @@
   
 </head>
 
+<img src="base.jpg">
+<img src="lvl1.jpg">
+<img src="lvl2.jpg">
+<img src="lvl3.jpg">
+<img src="lvl4.jpg">
+<img src="lvl5.jpg">
 
 
 <script>
   
+ $("img").click(function(){
+  $(this).hide();
+}); 
   
 </script>
