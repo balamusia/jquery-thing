@@ -31,12 +31,11 @@
 <script>
   
   let imgStep = 0;
-  let imgSource;
   
   function changeImage(img) {
     
     if (imgStep<5){
-      let imgSource;
+    let imgSource;
     imgStep++;
     imgSource = `lvl${imgStep}.jpg`;
     document.getElementById("img").src = `lvl${imgStep}.jpg`;
