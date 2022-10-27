@@ -5,7 +5,11 @@
     
     img{
       position: absolute;
-      display:block;
+      display: block;
+    }
+    
+    .over{
+      display: block;
     }
   
   
@@ -14,18 +18,38 @@
   
 </head>
 
-<img src="base.jpg">
-<img src="lvl1.jpg">
+<img id="img" src="base.jpg" onclick='changeImage(this);'>
+
+
+<!-- <img src="lvl1.jpg">
 <img src="lvl2.jpg">
 <img src="lvl3.jpg">
 <img src="lvl4.jpg">
-<img src="lvl5.jpg">
+<img src="lvl5.jpg"> -->
 
 
 <script>
   
- $("img").click(function(){
-  $(this).hide();
-}); 
+  let imgStep = 0;
+  let imgSource;
+  
+  function changeImage(img) {
+    
+    if (imgStep<5){
+      let imgSource;
+    imgStep++;
+    imgSource = `lvl${imgStep}.jpg`;
+    document.getElementById("img").src = `lvl${imgStep}.jpg`;
+    console.log(imgStep);
+    console.log(imgSource);
+      
+    }
+    
+    
+}
+  
+  
+  
+ 
   
 </script>
